@@ -1,7 +1,10 @@
 <template>
   <footer>
     <div class="copyright">
-      <n-text class="description" v-html="packageJson.description" />
+      <n-text
+        class="description"
+        v-html="packageJson.description"
+      />
       <n-text
         class="author"
         :depth="3"
@@ -20,14 +23,14 @@
 </template>
 
 <script setup>
-import packageJson from "@/../package.json";
+import packageJson from '@/../package.json'
 
-const icp = ref(import.meta.env.VITE_ICP ? import.meta.env.VITE_ICP : null);
+const icp = ref(import.meta.env.VITE_ICP ? import.meta.env.VITE_ICP : null)
 
 // 链接跳转
-const jumpLink = (url) => {
-  window.open(url);
-};
+const jumpLink = url => {
+  window.open(url)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -44,7 +47,7 @@ footer {
     margin-bottom: 4px;
     .description {
       &::after {
-        content: "@ Copyright By";
+        content: '@ Copyright By';
         margin: 0 6px;
       }
     }
